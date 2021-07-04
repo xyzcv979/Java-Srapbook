@@ -1,5 +1,9 @@
 /*
 * Quick Find algorithm for Dynamic connectivity
+* 
+* Initialize: N time
+* Union: N time
+* Find: 1 time
 *
 * Created by: Alexander Ng
 * Date: July 04, 2021
