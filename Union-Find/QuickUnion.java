@@ -1,9 +1,9 @@
 /*
 * Quick Union algorithm (better than quick find)
 * 
-* Initialize:  time
-* Union:  time
-* Find:  time
+* Initialize:  N time
+* Union:  height of tree time
+* Find:  height of tree time
 *
 * Created by: Alexander Ng
 * Date: July 04, 2021
