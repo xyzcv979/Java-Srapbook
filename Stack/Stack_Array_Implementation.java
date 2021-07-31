@@ -2,8 +2,8 @@
 * Stack_Array_Implementation.java
 *
 * Stack using an array
-* Benefits: constant amortized analysis. Over time, better runtime than linkedlist implementation
-* 
+* Benefits: amortized time. Over time, better runtime than linkedlist implementation
+* Tradeoffs: Might not be good when fast operations need to be guranteed due to having to resize at random intervals
 *
 */
 
