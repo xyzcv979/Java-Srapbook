@@ -2,7 +2,8 @@
 * Stack_Linked_List_Implementation.java
 *
 * Creating a stack using a LinkedList
-* Trade Offs: 
+* Benefits: Constant time operations
+* Tradeoffs: Extra space due to object Nodes
 *
 */
 
