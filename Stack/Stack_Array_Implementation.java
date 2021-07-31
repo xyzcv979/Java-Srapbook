@@ -3,7 +3,7 @@
 *
 * Stack using an array
 * Benefits: constant amortized analysis. Over time, better runtime than linkedlist implementation
-* Trade offs: 
+* 
 *
 */
 
