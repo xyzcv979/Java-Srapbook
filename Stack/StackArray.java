@@ -7,7 +7,7 @@
 *
 */
 
-public class Stack_Array_Implementation{
+public class StackArray{
   private Object[] array;
   private int stackCount;
   
