@@ -7,17 +7,36 @@
 *
 */
 
-public class StackArray<Item>{
+import java.util.Iterable;
+
+public class StackArray<Item> implements Iterable<Item>{
   private Item[] array;
   private int stackCount;
+  
+  public Iterator<Item> iterator(){
+    return new ArrayIterator(); 
+  }
+  
+  private class ArrayIterator implements Iterator<Item>{
+    private index = stackCount;
+    
+    public boolean hasNext(){
+      return index > 0; 
+    }
+    public Item next(){
+      return array[--index];
+    }
+  }
   
   public Stack_Array_Implementation(){
     array = new Item[1];
     stackCount = 1;
   }
+  
   public boolean isEmpty(){
     return array.length == 0 ? true : false; 
   }
+  
   public void push(Item item){
     // Resizing array if it hits threshold
     if(stackCount == array.length)
