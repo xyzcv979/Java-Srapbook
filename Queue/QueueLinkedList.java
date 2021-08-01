@@ -28,10 +28,10 @@ public class QueueLinkedList{
   }
   
   public Object dequeue(){
-    if(isEmpty())
-      return null;
-    Node oldFirst = first;
+    Object oldFirst = first.val;
     first = first.next;
+    if(isEmpty())
+      last = null;
     return oldFirst;
   }
   
