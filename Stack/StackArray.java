@@ -7,18 +7,18 @@
 *
 */
 
-public class StackArray{
-  private Object[] array;
+public class StackArray<Item>{
+  private Item[] array;
   private int stackCount;
   
   public Stack_Array_Implementation(){
-    array = new Object[1];
+    array = new Item[1];
     stackCount = 1;
   }
   public boolean isEmpty(){
     return array.length == 0 ? true : false; 
   }
-  public void push(Object item){
+  public void push(Item item){
     // Resizing array if it hits threshold
     if(stackCount == array.length)
       resize(array.length * 2);
@@ -26,27 +26,24 @@ public class StackArray{
   }
   
   private void resize(int capacity){
-    int[] copy = new int[capacity];
+    Item[] copy = (Item[]) new Object[capacity];  // Java doesn't allow generic arrays. Need to cast to generic
     for(int i = 0; i<array.length; i++){
       copy[i] = array[i]; 
     }
     array = copy;
   }
   
-  public Object pop(){
+  public Item pop(){
     if(stackCount == 0)
       return null;
-    
-    Object temp = array[--stackCount];
-    
+    Item temp = array[--stackCount];
     // shrinking array, saving space
     if(stackCount > 0 && stackCount == array.length / 4)  
       resize(array.length / 2);
-    
     return temp;
   }
   
-  public Object peek(){
+  public Item peek(){
     return array[stackCount-1];
   }
  
