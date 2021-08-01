@@ -28,7 +28,7 @@ public class StackArray<Item> implements Iterable<Item>{
     }
   }
   
-  public Stack_Array_Implementation(){
+  public StackArray(){
     array = new Item[1];
     stackCount = 1;
   }
