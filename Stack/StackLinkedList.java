@@ -7,7 +7,7 @@
 *
 */
 
-public class Stack_Linked_List_Implementation{
+public class StackLinkedList{
   
   private Node head = null;
   
