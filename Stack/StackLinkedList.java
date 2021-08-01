@@ -9,9 +9,26 @@
 
 import java.util.Iterable;
 
-public class StackLinkedList<Item> implements Iterable{
+public class StackLinkedList<Item> implements Iterable<Item>{
   
   private Node head = null;
+  
+  public Iterator<Item> iterator(){
+    return new ListIterator(); 
+  }
+  
+  private class ListIterator implements Iterator<Item>{
+    private Node curr = head;
+    
+    public boolean hasNext(){
+      return curr.next != null; 
+    }
+    public Item next(){
+      Item item = curr.val;
+      curr = curr.next;
+      return item;
+    }
+  }
   
   private class Node{
     Item val;
