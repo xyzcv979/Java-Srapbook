@@ -1,18 +1,20 @@
 /*
 * Stack_Linked_List_Implementation.java
 *
-* Creating a stack using a LinkedList
+* Creating a stack using a LinkedList, with iterable properties
 * Benefits: Constant time operations
 * Tradeoffs: Extra space due to object Nodes
 *
 */
 
-public class StackLinkedList{
+import java.util.Iterable;
+
+public class StackLinkedList<Item> implements Iterable{
   
   private Node head = null;
   
   private class Node{
-    Object val;
+    Item val;
     Node next;
     
   }
@@ -21,16 +23,16 @@ public class StackLinkedList{
     return head.val == null; 
   }  
   
-  public Node pop(){
+  public Item pop(){
     if(head == null)
       return null;
     Node temp = head;
     head = head.next;
-    return temp;
+    return temp.val;
   }
     
     
-  public void push(Object val){
+  public void push(Item val){
     Node newNode = new Node();
     newNode.val = val;
     newNode.next = head;
@@ -38,10 +40,10 @@ public class StackLinkedList{
   }
     
     
-  public Node peek(){
+  public Item peek(){
     if(head == null)
       return null;
-    return head; 
+    return head.val; 
   }
   
   
